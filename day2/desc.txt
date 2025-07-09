@@ -1,0 +1,2 @@
+today just the gussing number simple game reference to the rust book
+and a simple variable concepts 
