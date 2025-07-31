@@ -1,14 +1,33 @@
 fn main() {
-    let s1: String = String::from("Hello");
-    let len: usize = calculae_leng(s1.clone());
-
-    println!("The lrngth of {} is {}", s1, len);
+    let  mut s1: String = String::from("Hello");
+    append_string(&mut s1);
+    println!("The new string is this {}", s1);
+    // let len: usize = calculae_leng(&s1); //borrow operation
+    // println!("The lrngth of {} is {}", s1, len);
+}
+fn append_string(s3: &mut String) {
+    s3.push_str("world");
 }
 
-fn calculae_leng(s: String) -> usize {
-    let length:usize = s.len();
-    return length;
-}
+// fn calculae_leng(s2: &String) -> usize {
+//     return s2.len();
+// }
+
+
+// ________________________________________
+// avoidig ownership
+
+// fn main() {
+//     let s1: String = String::from("Hello");
+//     let len: usize = calculae_leng(s1.clone());
+
+//     println!("The lrngth of {} is {}", s1, len);
+// }
+
+// fn calculae_leng(s: String) -> usize {
+//     let length:usize = s.len();
+//     return length;
+// }
 
 // fn main() {
 //     let s1: String = String::from("Hello");
