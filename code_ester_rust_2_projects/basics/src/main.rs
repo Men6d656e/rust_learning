@@ -1,18 +1,66 @@
-fn main() {
-    let  mut s1: String = String::from("Hello");
-    append_string(&mut s1);
-    println!("The new string is this {}", s1);
-    // let len: usize = calculae_leng(&s1); //borrow operation
-    // println!("The lrngth of {} is {}", s1, len);
-}
-fn append_string(s3: &mut String) {
-    s3.push_str("world");
-}
+// fn main() {
+//     let refrence_to_nothing = create_string_ref();
+// }
+// fn create_string_ref() -> &String {
+//     let s: String = String::from("hello");
+//     return &s;
+// }
+
+// __________________________________________________
+// refrencing auto refrencing
+// fn main() {
+//     let mut x = 5;
+//     println!("x={:p}", &x);
+//     let y = &mut x;
+//     *y = *y + 1;
+//     println!("y={:p}", y);
+//     println!("y={}", y);
+// }
+
+// fn main() {
+//     let x = 5;
+//     println!("x={:p}", &x);
+//     let y = &x;
+//     println!("y={:p}", y);
+// }
+
+// _____________________________________________________________________________________
+// refrence rule can't makr muttliple write and read at a time it occcurs conflicts
+
+// fn main() {
+//     let mut s1: String = String::from("hello");
+
+//     let w1 = &mut s1;
+//     w1.push_str(" world");
+//     // println!("r1={}", w1);
+
+//     let w2 = &mut s1;
+//     w2.push_str(" code");
+//     // println!("r2={}", w2);
+
+//     println!("r1={} r2={}", w1, w2);
+
+//     // let r1 = &s1;
+//     // let r2 = &s1;
+//     // println!("r1={} r2={}", r1, r2);
+// }
+
+// ___________________________________________________________
+// borrow
+// fn main() {
+//     let  mut s1: String = String::from("Hello");
+//     append_string(&mut s1);
+//     println!("The new string is this {}", s1);
+//     // let len: usize = calculae_leng(&s1); //borrow operation
+//     // println!("The lrngth of {} is {}", s1, len);
+// }
+// fn append_string(s3: &mut String) {
+//     s3.push_str("world");
+// }
 
 // fn calculae_leng(s2: &String) -> usize {
 //     return s2.len();
 // }
-
 
 // ________________________________________
 // avoidig ownership
