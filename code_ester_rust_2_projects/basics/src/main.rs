@@ -1,3 +1,140 @@
+use std::io;
+fn main() {
+    let mut input = String::new();
+    println!("Please input your name:");
+    io::stdin().read_line(&mut input).expect("Input Failed");
+    println!("User input:{}", input);
+}
+
+// ------------------------------------------------------------------
+
+//match
+
+// fn main() {
+//     fn is_even(num: i8) -> bool {
+//         if num % 2 == 0 {
+//             return true;
+//         }
+//         return false;
+//     }
+
+//     let number = 5;
+//     match number {
+//         x if is_even(x) => println!("Even"),
+//         x if !is_even(x) => println!("odd"),
+//         _ => println!("error"),
+//     }
+
+// let number = 5;
+// match number {
+//     1 | 3 => println!("number is one"),
+//     2 | 4 => println!("number is two"),
+//     5 => println!("number is five"),
+//     _ => println!("number is not recogniziable"),
+// }
+// }
+
+// -------------------------------------------------
+// for loop
+// fn main() {
+//     let arr = [1, 2, 3];
+//     println!("arr[0]={}", arr[0]);
+//     println!("arr[1]={}", arr[1]);
+//     println!("arr[2]={}", arr[2]);
+
+//     for element in &arr {
+//         println!("{}", element)
+//     }
+// }
+
+// ---------------------------------------------
+//shadowing
+// fn main() {
+//     let x = 5;
+//     let x = "hello";
+//     let x = x.len();
+
+// }
+
+// --------------------------------------------------------------------
+// vectors
+
+// fn main() {
+//     let vrr: Vec<&str> = vec!["hello", "world", "coders"];
+//     write_vrr(&vrr);
+//     println!("vrr={:?}", vrr);
+// }
+
+// fn write_vrr(vrr2: &Vec<&str>) {
+//     println!("vrr2={:?}", vrr2);
+// }
+
+// fn main() {
+//     // let mut v: Vec<i32> = Vec::new(); //declaration
+//     // another way to declare this vector
+//     // let mut v = Vec::<i32>::new();
+//     // v.push(1);
+//     // v.push(2);
+//     // v.push(3);
+
+//     let mut v = vec![1, 2, 3, 4, 5, 6];
+//     v.push(3);
+//     v.pop();
+//     println!("Vector v={:?}", v)
+// }
+
+// ------------------------------------------------------------
+//array
+
+// fn main() {
+//     let arr: [&str; 3] = ["hello", "world", "coders"];
+//     read_arry(&arr);
+//     println!("arr={:?}", arr);
+// }
+
+// fn read_arry(arr1: &[&str; 3]) {
+//     println!("arr1={:?}", arr1);
+// }
+
+// pass referernce
+// fn main() {
+//     let mut arr: [&str; 3] = ["hello", "world", "coders"];
+//     write_arr(&mut arr);
+//     println!("arr={:?}", arr);
+// }
+
+// fn write_arr(arr1: &mut [&str; 3]) {
+//     arr1[0] = "fellow";
+//     println!("arr1={:?}", arr1);
+// }
+
+// --
+// cocpy entire array
+// fn main() {
+//     let arr: [&str; 3] = ["hello", "world", "coders"];
+//     write_arr(arr);
+//     println!("arr={:?}", arr);
+// }
+
+// fn write_arr(mut arr1: [&str; 3]) {
+//     //it makes the copy
+//     arr1[0] = "fellow";
+//     println!("arr1={:?}", arr1);
+// }
+
+// fn main() {
+//     // let arr1:[u8;5];//array declaration
+//     let mut arr1;
+//     arr1 = [1, 2, 3, 4, 5];
+//     println!("arr[0]={}", arr1[0]);
+//     println!("arr={:?}", arr1);
+
+//     arr1[2] = 30;
+//     println!("arr={:?}", arr1);
+//     println!("Array length is {}", arr1.len());
+// }
+// ______________________________________________
+// Dangling refrence
 // fn main() {
 //     let refrence_to_nothing = create_string_ref();
 // }
